@@ -28,17 +28,43 @@ public class WelcomeGUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        welcomeTA = new javax.swing.JScrollPane();
+        messageTA = new javax.swing.JTextArea();
+        startBTN = new javax.swing.JButton();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        messageTA.setColumns(20);
+        messageTA.setFont(messageTA.getFont().deriveFont(messageTA.getFont().getStyle() | java.awt.Font.BOLD, messageTA.getFont().getSize()+7));
+        messageTA.setLineWrap(true);
+        messageTA.setRows(5);
+        messageTA.setText("Do you have what it takes to \nbe a water sanitation manager?");
+        welcomeTA.setViewportView(messageTA);
+
+        startBTN.setText("Start");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(85, 85, 85)
+                        .addComponent(welcomeTA, javax.swing.GroupLayout.PREFERRED_SIZE, 409, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(211, 211, 211)
+                        .addComponent(startBTN)))
+                .addContainerGap(89, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(57, 57, 57)
+                .addComponent(welcomeTA, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(60, 60, 60)
+                .addComponent(startBTN)
+                .addContainerGap(73, Short.MAX_VALUE))
         );
 
         pack();
@@ -70,5 +96,8 @@ public class WelcomeGUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextArea messageTA;
+    private javax.swing.JButton startBTN;
+    private javax.swing.JScrollPane welcomeTA;
     // End of variables declaration//GEN-END:variables
 }

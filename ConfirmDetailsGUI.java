@@ -28,17 +28,96 @@ public class ConfirmDetailsGUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        detailsTF = new javax.swing.JTextField();
+        confirmNameLBL = new javax.swing.JLabel();
+        confirmAgeLBL = new javax.swing.JLabel();
+        confirmGenderLBL = new javax.swing.JLabel();
+        confirmCountyLBL = new javax.swing.JLabel();
+        confirmNameTF = new javax.swing.JTextField();
+        confirmAgeTF = new javax.swing.JTextField();
+        confirmGenderTF = new javax.swing.JTextField();
+        confirmCountryTF = new javax.swing.JTextField();
+        confirmBTN = new javax.swing.JButton();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        detailsTF.setFont(new java.awt.Font("sansserif", 1, 17)); // NOI18N
+        detailsTF.setText("These are your details:");
+
+        confirmNameLBL.setFont(new java.awt.Font("sansserif", 1, 17)); // NOI18N
+        confirmNameLBL.setText("Name:");
+
+        confirmAgeLBL.setFont(new java.awt.Font("sansserif", 1, 17)); // NOI18N
+        confirmAgeLBL.setText("Age:");
+
+        confirmGenderLBL.setFont(new java.awt.Font("sansserif", 1, 17)); // NOI18N
+        confirmGenderLBL.setText("Gender:");
+
+        confirmCountyLBL.setFont(new java.awt.Font("sansserif", 1, 17)); // NOI18N
+        confirmCountyLBL.setText("Country:");
+
+        confirmBTN.setText("Confirm");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(199, 199, 199)
+                        .addComponent(detailsTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(42, 42, 42)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(confirmAgeLBL)
+                                    .addComponent(confirmGenderLBL)
+                                    .addComponent(confirmCountyLBL))
+                                .addGap(51, 51, 51)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(confirmGenderTF, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(confirmCountryTF, javax.swing.GroupLayout.PREFERRED_SIZE, 338, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(confirmNameLBL)
+                                .addGap(69, 69, 69)
+                                .addComponent(confirmNameTF, javax.swing.GroupLayout.PREFERRED_SIZE, 406, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addGroup(layout.createSequentialGroup()
+                            .addContainerGap()
+                            .addComponent(confirmAgeTF, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                            .addGap(242, 242, 242)
+                            .addComponent(confirmBTN))))
+                .addGap(77, 77, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(15, 15, 15)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(detailsTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(confirmNameLBL))
+                            .addComponent(confirmNameTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(34, 34, 34)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(confirmAgeLBL, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(confirmAgeTF, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(40, 40, 40)
+                        .addComponent(confirmGenderLBL))
+                    .addComponent(confirmGenderTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(26, 26, 26)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(confirmCountyLBL)
+                    .addComponent(confirmCountryTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
+                .addComponent(confirmBTN)
+                .addGap(22, 22, 22))
         );
 
         pack();
@@ -70,5 +149,15 @@ public class ConfirmDetailsGUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel confirmAgeLBL;
+    private javax.swing.JTextField confirmAgeTF;
+    private javax.swing.JButton confirmBTN;
+    private javax.swing.JTextField confirmCountryTF;
+    private javax.swing.JLabel confirmCountyLBL;
+    private javax.swing.JLabel confirmGenderLBL;
+    private javax.swing.JTextField confirmGenderTF;
+    private javax.swing.JLabel confirmNameLBL;
+    private javax.swing.JTextField confirmNameTF;
+    private javax.swing.JTextField detailsTF;
     // End of variables declaration//GEN-END:variables
 }
