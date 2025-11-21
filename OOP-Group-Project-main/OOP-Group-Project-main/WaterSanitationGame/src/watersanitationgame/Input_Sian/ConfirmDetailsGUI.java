@@ -68,8 +68,18 @@ public class ConfirmDetailsGUI extends javax.swing.JFrame {
         });
 
         backBTN.setText("Back");
+        backBTN.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                backBTNActionPerformed(evt);
+            }
+        });
 
         exitBTN.setText("Exit");
+        exitBTN.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                exitBTNActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -150,6 +160,19 @@ public class ConfirmDetailsGUI extends javax.swing.JFrame {
         n.setVisible(true);
         dispose();
     }//GEN-LAST:event_confirmBTNActionPerformed
+
+    private void backBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backBTNActionPerformed
+        // TODO add your handling code here:
+        //When the back button is clicked, we go back to either UserSearchGUI or the previous frame the user was on
+    }//GEN-LAST:event_backBTNActionPerformed
+
+    private void exitBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitBTNActionPerformed
+        // TODO add your handling code here:
+        //When the exit button is clicked, we close the JFrame form
+        ConfirmDetailsGUI cdg = new ConfirmDetailsGUI();
+        cdg.setVisible(false);
+        dispose();
+    }//GEN-LAST:event_exitBTNActionPerformed
 
     /**
      * @param args the command line arguments

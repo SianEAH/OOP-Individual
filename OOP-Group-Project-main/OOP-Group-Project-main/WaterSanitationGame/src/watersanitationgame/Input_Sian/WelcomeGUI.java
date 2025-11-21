@@ -50,6 +50,11 @@ public class WelcomeGUI extends javax.swing.JFrame {
         });
 
         exitBTN.setText("Exit");
+        exitBTN.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                exitBTNActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -84,10 +89,18 @@ public class WelcomeGUI extends javax.swing.JFrame {
 
     private void startBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_startBTNActionPerformed
         // TODO add your handling code here:
-        UserDetailsGUI udg = new UserDetailsGUI();
-        udg.setVisible(true);
+        SummaryGUI sum = new SummaryGUI();
+        sum.setVisible(true);
         dispose();
     }//GEN-LAST:event_startBTNActionPerformed
+
+    private void exitBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitBTNActionPerformed
+        // TODO add your handling code here:
+        //when the exit button is clicked, the JFrame becomes invisible
+        WelcomeGUI wel = new WelcomeGUI();
+        wel.setVisible(false);
+        dispose();
+    }//GEN-LAST:event_exitBTNActionPerformed
 
     /**
      * @param args the command line arguments

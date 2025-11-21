@@ -46,10 +46,25 @@ public class SummaryGUI extends javax.swing.JFrame {
         jScrollPane1.setViewportView(summaryTF);
 
         backBTN.setText("Back");
+        backBTN.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                backBTNActionPerformed(evt);
+            }
+        });
 
         nextBTN.setText("Next");
+        nextBTN.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nextBTNActionPerformed(evt);
+            }
+        });
 
         exitBTN.setText("Exit");
+        exitBTN.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                exitBTNActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -87,6 +102,30 @@ public class SummaryGUI extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void backBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backBTNActionPerformed
+        // TODO add your handling code here:
+        //When the back button is pressed, go back to the WelcomeGUI
+        WelcomeGUI wel = new WelcomeGUI();
+        wel.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_backBTNActionPerformed
+
+    private void nextBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nextBTNActionPerformed
+        // TODO add your handling code here:
+        //When the next button is clicked, proceed onto the UserSearch
+        UserSearchGUI ser = new UserSearchGUI();
+        ser.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_nextBTNActionPerformed
+
+    private void exitBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitBTNActionPerformed
+        // TODO add your handling code here:
+        //When the exit button is clicked, close the JFrame form
+        SummaryGUI sum = new SummaryGUI();
+        sum.setVisible(false);
+        dispose();
+    }//GEN-LAST:event_exitBTNActionPerformed
 
     /**
      * @param args the command line arguments
