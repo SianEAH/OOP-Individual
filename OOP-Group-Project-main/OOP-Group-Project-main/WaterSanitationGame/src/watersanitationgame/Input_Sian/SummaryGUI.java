@@ -8,14 +8,14 @@ package watersanitationgame.Input_Sian;
  *
  * @author Sian
  */
-public class WelcomeGUI extends javax.swing.JFrame {
+public class SummaryGUI extends javax.swing.JFrame {
     
-    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(WelcomeGUI.class.getName());
+    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(SummaryGUI.class.getName());
 
     /**
-     * Creates new form WelcomeGUI
+     * Creates new form SummaryGUI
      */
-    public WelcomeGUI() {
+    public SummaryGUI() {
         initComponents();
     }
 
@@ -28,26 +28,26 @@ public class WelcomeGUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        welcomeTA = new javax.swing.JScrollPane();
-        messageTA = new javax.swing.JTextArea();
-        startBTN = new javax.swing.JButton();
+        jTextField1 = new javax.swing.JTextField();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        summaryTF = new javax.swing.JTextArea();
+        backBTN = new javax.swing.JButton();
+        nextBTN = new javax.swing.JButton();
         exitBTN = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        messageTA.setColumns(20);
-        messageTA.setFont(messageTA.getFont().deriveFont(messageTA.getFont().getStyle() | java.awt.Font.BOLD, messageTA.getFont().getSize()+7));
-        messageTA.setLineWrap(true);
-        messageTA.setRows(5);
-        messageTA.setText("Do you have what it takes to \nbe a water sanitation manager?");
-        welcomeTA.setViewportView(messageTA);
+        jTextField1.setText("What is going to happen?");
 
-        startBTN.setText("Start");
-        startBTN.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                startBTNActionPerformed(evt);
-            }
-        });
+        summaryTF.setColumns(20);
+        summaryTF.setLineWrap(true);
+        summaryTF.setRows(5);
+        summaryTF.setText("1) Enter your details on the next slide\n\n2) If you have played before, you can search for your details, if not, enter your details. When you're happy with your details, click submit, to move onto the game\n\n3) Pick from your choices during the game to receive your ending\n\nAre you a good water sanitation manager? Find out... click the button below!");
+        jScrollPane1.setViewportView(summaryTF);
+
+        backBTN.setText("Back");
+
+        nextBTN.setText("Next");
 
         exitBTN.setText("Exit");
 
@@ -58,36 +58,35 @@ public class WelcomeGUI extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(85, 85, 85)
-                        .addComponent(welcomeTA, javax.swing.GroupLayout.PREFERRED_SIZE, 409, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(237, 237, 237)
+                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(143, 143, 143)
-                        .addComponent(startBTN)
-                        .addGap(93, 93, 93)
+                        .addGap(98, 98, 98)
+                        .addComponent(backBTN)
+                        .addGap(90, 90, 90)
+                        .addComponent(nextBTN)
+                        .addGap(99, 99, 99)
                         .addComponent(exitBTN)))
-                .addContainerGap(89, Short.MAX_VALUE))
+                .addContainerGap(196, Short.MAX_VALUE))
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(57, 57, 57)
-                .addComponent(welcomeTA, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(60, 60, 60)
+                .addContainerGap()
+                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(29, 29, 29)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(startBTN)
+                    .addComponent(backBTN)
+                    .addComponent(nextBTN)
                     .addComponent(exitBTN))
-                .addContainerGap(73, Short.MAX_VALUE))
+                .addGap(26, 26, 26))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void startBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_startBTNActionPerformed
-        // TODO add your handling code here:
-        UserDetailsGUI udg = new UserDetailsGUI();
-        udg.setVisible(true);
-        dispose();
-    }//GEN-LAST:event_startBTNActionPerformed
 
     /**
      * @param args the command line arguments
@@ -111,13 +110,15 @@ public class WelcomeGUI extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(() -> new WelcomeGUI().setVisible(true));
+        java.awt.EventQueue.invokeLater(() -> new SummaryGUI().setVisible(true));
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton backBTN;
     private javax.swing.JButton exitBTN;
-    private javax.swing.JTextArea messageTA;
-    private javax.swing.JButton startBTN;
-    private javax.swing.JScrollPane welcomeTA;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextField jTextField1;
+    private javax.swing.JButton nextBTN;
+    private javax.swing.JTextArea summaryTF;
     // End of variables declaration//GEN-END:variables
 }

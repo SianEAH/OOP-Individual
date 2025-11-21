@@ -8,14 +8,14 @@ package watersanitationgame.Input_Sian;
  *
  * @author Sian
  */
-public class UserDetailsGUI extends javax.swing.JFrame {
+public class ReturningUser extends javax.swing.JFrame {
     
-    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(UserDetailsGUI.class.getName());
+    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(ReturningUser.class.getName());
 
     /**
-     * Creates new form UserDetailsGUI
+     * Creates new form ReturningUser
      */
-    public UserDetailsGUI() {
+    public ReturningUser() {
         initComponents();
     }
 
@@ -36,109 +36,99 @@ public class UserDetailsGUI extends javax.swing.JFrame {
         ageTF = new javax.swing.JTextField();
         genderTF = new javax.swing.JTextField();
         countryTF = new javax.swing.JTextField();
-        SubmitBTN = new javax.swing.JButton();
         backBTN = new javax.swing.JButton();
-        exitBTN = new javax.swing.JButton();
+        searchBTN = new javax.swing.JButton();
         clearBTN = new javax.swing.JButton();
+        deleteBTN = new javax.swing.JButton();
+        exitBTN = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        nameLBL.setFont(new java.awt.Font("sansserif", 1, 17)); // NOI18N
-        nameLBL.setText("Name:");
+        nameLBL.setText("Name");
 
-        ageLBL.setFont(new java.awt.Font("sansserif", 1, 17)); // NOI18N
-        ageLBL.setText("Age:");
+        ageLBL.setText("Age");
 
-        genderLBL.setFont(new java.awt.Font("sansserif", 1, 17)); // NOI18N
-        genderLBL.setText("Gender:");
+        genderLBL.setText("Gender");
 
-        countryLBL.setFont(new java.awt.Font("sansserif", 1, 17)); // NOI18N
-        countryLBL.setText("Country:");
-
-        SubmitBTN.setText("Submit");
-        SubmitBTN.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                SubmitBTNActionPerformed(evt);
-            }
-        });
+        countryLBL.setText("Country");
 
         backBTN.setText("Back");
 
-        exitBTN.setText("Exit");
+        searchBTN.setText("Search");
 
         clearBTN.setText("Clear");
+
+        deleteBTN.setText("Delete User");
+
+        exitBTN.setText("Exit");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(44, 44, 44)
+                .addGap(33, 33, 33)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(ageLBL)
+                        .addComponent(backBTN)
+                        .addGap(28, 28, 28)
+                        .addComponent(searchBTN)
+                        .addGap(18, 18, 18)
+                        .addComponent(clearBTN)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(deleteBTN)
+                        .addGap(18, 18, 18)
+                        .addComponent(exitBTN))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addGroup(layout.createSequentialGroup()
+                            .addComponent(countryLBL)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(countryTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                             .addComponent(genderLBL)
-                            .addComponent(countryLBL))
-                        .addGap(20, 20, 20)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(ageTF, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(genderTF, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(countryTF, javax.swing.GroupLayout.PREFERRED_SIZE, 365, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(154, 154, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(nameLBL)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(nameTF, javax.swing.GroupLayout.PREFERRED_SIZE, 450, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(69, 69, 69))))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(106, 106, 106)
-                .addComponent(backBTN)
-                .addGap(62, 62, 62)
-                .addComponent(SubmitBTN)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(clearBTN)
-                .addGap(34, 34, 34)
-                .addComponent(exitBTN)
-                .addGap(118, 118, 118))
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(genderTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                            .addComponent(ageLBL)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(ageTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                            .addComponent(nameLBL)
+                            .addGap(150, 150, 150)
+                            .addComponent(nameTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(11, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(26, 26, 26)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGap(22, 22, 22)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(nameLBL)
                     .addComponent(nameTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(30, 30, 30)
+                .addGap(27, 27, 27)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(ageLBL)
                     .addComponent(ageTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(35, 35, 35)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGap(31, 31, 31)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(genderLBL)
                     .addComponent(genderTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(44, 44, 44)
+                .addGap(27, 27, 27)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(countryLBL)
                     .addComponent(countryTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(27, 27, 27)
+                .addGap(37, 37, 37)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(SubmitBTN)
                     .addComponent(backBTN)
-                    .addComponent(exitBTN)
-                    .addComponent(clearBTN))
-                .addContainerGap(38, Short.MAX_VALUE))
+                    .addComponent(searchBTN)
+                    .addComponent(clearBTN)
+                    .addComponent(deleteBTN)
+                    .addComponent(exitBTN))
+                .addContainerGap(45, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void SubmitBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SubmitBTNActionPerformed
-        // TODO add your handling code here:
-        ConfirmDetailsGUI cdg = new ConfirmDetailsGUI();
-        cdg.setVisible(true);
-        dispose();
-    }//GEN-LAST:event_SubmitBTNActionPerformed
 
     /**
      * @param args the command line arguments
@@ -162,21 +152,22 @@ public class UserDetailsGUI extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(() -> new UserDetailsGUI().setVisible(true));
+        java.awt.EventQueue.invokeLater(() -> new ReturningUser().setVisible(true));
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton SubmitBTN;
     private javax.swing.JLabel ageLBL;
     private javax.swing.JTextField ageTF;
     private javax.swing.JButton backBTN;
     private javax.swing.JButton clearBTN;
     private javax.swing.JLabel countryLBL;
     private javax.swing.JTextField countryTF;
+    private javax.swing.JButton deleteBTN;
     private javax.swing.JButton exitBTN;
     private javax.swing.JLabel genderLBL;
     private javax.swing.JTextField genderTF;
     private javax.swing.JLabel nameLBL;
     private javax.swing.JTextField nameTF;
+    private javax.swing.JButton searchBTN;
     // End of variables declaration//GEN-END:variables
 }
