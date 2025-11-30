@@ -11,11 +11,30 @@ package watersanitationgame.Input_Sian;
 public class Age {
     
     //data members
+    private int age;
+    
+    public Age() {}
     
     //constructor
+    public Age(int age) {
+        this.age = age;
+    }
     
     //setters
+    public void setAge(int age) {
+        this.age = age;
+    }
+    
     
     //getters
+    public int getAge() {
+        return age;
+    }
+    
+    @Override
+    public String toString() {
+    return age + ""; // converts int to String
+}
+
     
 }

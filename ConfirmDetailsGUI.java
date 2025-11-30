@@ -17,8 +17,16 @@ public class ConfirmDetailsGUI extends javax.swing.JFrame {
     /**
      * Creates new form ConfirmDetailsGUI
      */
-    public ConfirmDetailsGUI() {
+    //I want my userDetails in here
+    private UserDetails userDetails;
+    
+    public ConfirmDetailsGUI(UserDetails userDetails) { //the values i need it to take
         initComponents();
+        this.userDetails = userDetails;
+        confirmNameTF.setText(userDetails.getName().getName());
+        confirmAgeTF.setText(String.valueOf(userDetails.getAge().getAge()));
+        confirmGenderTF.setText(userDetails.getGender().getGender());
+        confirmCountryTF.setText(userDetails.getCountry().getCountry());
     }
 
     /**
@@ -172,8 +180,8 @@ public class ConfirmDetailsGUI extends javax.swing.JFrame {
     private void exitBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitBTNActionPerformed
         // TODO add your handling code here:
         //When the exit button is clicked, we close the JFrame form
-        ConfirmDetailsGUI cdg = new ConfirmDetailsGUI();
-        cdg.setVisible(false);
+        /*ConfirmDetailsGUI cdg = new ConfirmDetailsGUI();
+        cdg.setVisible(false);*/
         dispose();
     }//GEN-LAST:event_exitBTNActionPerformed
 
@@ -199,7 +207,7 @@ public class ConfirmDetailsGUI extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(() -> new ConfirmDetailsGUI().setVisible(true));
+        //java.awt.EventQueue.invokeLater(() -> new ConfirmDetailsGUI().setVisible(true));
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

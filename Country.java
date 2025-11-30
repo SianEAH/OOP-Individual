@@ -11,11 +11,31 @@ package watersanitationgame.Input_Sian;
 public class Country {
     
      //data members
+    private String country;
+    
+    public Country() {}
     
     //constructor
+    public Country(String country) {
+        this.country = country;
+    }
     
     //setters
+    public void setCountry(String country) {
+        this.country = country;
+    }
+    
     
     //getters
+    public String getCountry() {
+        return country;
+    }
+    
+    @Override
+    public String toString() {
+    return country;
+}
+
+    
     
 }

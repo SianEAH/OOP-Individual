@@ -4,6 +4,7 @@
  */
 package watersanitationgame.Input_Sian;
 
+import javax.swing.JOptionPane;
 import watersanitationgame.Events_Nikolas.EventsGUI;
 
 /**
@@ -196,6 +197,27 @@ public class ReturningUserGUI extends javax.swing.JFrame {
 
     private void okBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_okBTNActionPerformed
         // TODO add your handling code here:
+        //Check to make sure the user entered details
+        //Do not proceed to the next JFrame if the details are empty
+         if (nameTF.getText().isEmpty()) {
+           JOptionPane.showMessageDialog(null, "Please enter a name"); 
+            return;
+        } 
+        
+        if (ageTF.getText().isEmpty()) { 
+           JOptionPane.showMessageDialog(null, "Please enter an age"); 
+            return;
+        } 
+        
+        if (genderTF.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(null, "Please enter a gender");
+             return;
+        } 
+        
+        if (countryTF.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(null, "Please enter a country");
+             return;
+        }
         //When this button is clicked, proceed onto the events section 
         EventsGUI n = new EventsGUI();
         n.setVisible(true);
@@ -210,6 +232,10 @@ public class ReturningUserGUI extends javax.swing.JFrame {
     private void clearBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearBTNActionPerformed
         // TODO add your handling code here:
         //When the clear button is clicked the user details are cleared
+        nameTF.setText("");
+        ageTF.setText("");
+        genderTF.setText("");
+        countryTF.setText("");
     }//GEN-LAST:event_clearBTNActionPerformed
 
     private void deleteBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteBTNActionPerformed

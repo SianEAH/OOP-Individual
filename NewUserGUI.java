@@ -8,6 +8,8 @@ package watersanitationgame.Input_Sian;
  *
  * @author Sian
  */
+import javax.swing.JOptionPane; 
+import watersanitationgame.Events_Nikolas.EventsGUI;
 public class NewUserGUI extends javax.swing.JFrame {
     
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(NewUserGUI.class.getName());
@@ -15,8 +17,12 @@ public class NewUserGUI extends javax.swing.JFrame {
     /**
      * Creates new form UserDetailsGUI
      */
+    //Creating my userDetails object
+    private UserDetails userDetails;
+    
     public NewUserGUI() {
         initComponents();
+        userDetails = new UserDetails(); //Initialise in my constructor
     }
 
     /**
@@ -161,12 +167,47 @@ public class NewUserGUI extends javax.swing.JFrame {
 
     private void SubmitBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SubmitBTNActionPerformed
         // TODO add your handling code here:
-        //When the submit button is clicked, the user details are added either to the userdetails file or the seperate classes, this is then stored in an ArrayList to be read by the other sections
+        //When the submit button is clicked, the user details are added to the seperate classes, this is then stored in an ArrayList to be read by the other sections
+        //Also if any of the fields are empty, pop an alert
+        //Do not proceed to the next JFrame if the details are empty
+        if (nameTF.getText().isEmpty()) {
+           JOptionPane.showMessageDialog(null, "Please enter a name"); 
+           return;
+        } 
         
+        if (ageTF.getText().isEmpty()) { 
+           JOptionPane.showMessageDialog(null, "Please enter an age"); 
+            return;
+        } 
+        
+        if (genderTF.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(null, "Please enter a gender"); 
+             return;
+        } 
+        
+        if (countryTF.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(null, "Please enter a country"); 
+             return;
+        }
+        
+        //Get the information
+        Name nme = new Name(nameTF.getText());
+        Age a = new Age(Integer.parseInt(ageTF.getText()));
+        Gender g = new Gender(genderTF.getText());
+        Country c = new Country(countryTF.getText());
+        
+        //Set the information
+        userDetails.setName(nme);
+        userDetails.setAge(a);
+        userDetails.setGender(g);
+        userDetails.setCountry(c);
+
         //When the submit button is clicked, we proceed onto the ConfirmDetailsGUI
-        ConfirmDetailsGUI cdg = new ConfirmDetailsGUI();
-        cdg.setVisible(true);
-        dispose();
+        //New:
+        ConfirmDetailsGUI confirmForm = new ConfirmDetailsGUI(userDetails);
+        confirmForm.setVisible(true);
+        dispose(); // close NewUserGUI
+
     }//GEN-LAST:event_SubmitBTNActionPerformed
 
     private void backBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backBTNActionPerformed
@@ -192,6 +233,11 @@ public class NewUserGUI extends javax.swing.JFrame {
     private void clearBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearBTNActionPerformed
         // TODO add your handling code here:
         //When the clear button is clicked, the user details they have entered are cleared
+        nameTF.setText("");
+        ageTF.setText("");
+        genderTF.setText("");
+        countryTF.setText("");
+
     }//GEN-LAST:event_clearBTNActionPerformed
 
     /**
