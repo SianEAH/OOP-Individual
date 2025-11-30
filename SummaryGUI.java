@@ -28,76 +28,105 @@ public class SummaryGUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jTextField1 = new javax.swing.JTextField();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        summaryTF = new javax.swing.JTextArea();
+        backgroundPNL = new javax.swing.JPanel();
         backBTN = new javax.swing.JButton();
         nextBTN = new javax.swing.JButton();
         exitBTN = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        summaryTF = new javax.swing.JTextArea();
+        jTextField1 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jTextField1.setText("What is going to happen?");
+        backgroundPNL.setBackground(new java.awt.Color(51, 204, 255));
 
-        summaryTF.setColumns(20);
-        summaryTF.setLineWrap(true);
-        summaryTF.setRows(5);
-        summaryTF.setText("1) Enter your details on the next slide\n\n2) If you have played before, you can search for your details, if not, enter your details. When you're happy with your details, click submit, to move onto the game\n\n3) Pick from your choices during the game to receive your ending\n\nAre you a good water sanitation manager? Find out... click the button below!");
-        jScrollPane1.setViewportView(summaryTF);
-
+        backBTN.setBackground(new java.awt.Color(204, 204, 204));
         backBTN.setText("Back");
+        backBTN.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         backBTN.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 backBTNActionPerformed(evt);
             }
         });
 
+        nextBTN.setBackground(new java.awt.Color(204, 204, 204));
+        nextBTN.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         nextBTN.setText("Next");
+        nextBTN.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         nextBTN.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 nextBTNActionPerformed(evt);
             }
         });
 
+        exitBTN.setBackground(new java.awt.Color(204, 204, 204));
         exitBTN.setText("Exit");
+        exitBTN.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         exitBTN.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 exitBTNActionPerformed(evt);
             }
         });
 
+        summaryTF.setBackground(new java.awt.Color(51, 204, 255));
+        summaryTF.setColumns(20);
+        summaryTF.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        summaryTF.setLineWrap(true);
+        summaryTF.setRows(5);
+        summaryTF.setText("1) Enter your details on the next slide\n\n2) If you have played before, you can search for your details, if not, enter your details. When you're happy with your details, click submit, to move onto the game\n\n3) Pick from your choices during the game to receive your ending\n\nAre you a good water sanitation manager? Find out... click the button below!");
+        jScrollPane1.setViewportView(summaryTF);
+
+        jTextField1.setBackground(new java.awt.Color(51, 204, 255));
+        jTextField1.setFont(new java.awt.Font("Segoe UI Black", 0, 24)); // NOI18N
+        jTextField1.setText("What is going to happen?");
+
+        javax.swing.GroupLayout backgroundPNLLayout = new javax.swing.GroupLayout(backgroundPNL);
+        backgroundPNL.setLayout(backgroundPNLLayout);
+        backgroundPNLLayout.setHorizontalGroup(
+            backgroundPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(backgroundPNLLayout.createSequentialGroup()
+                .addGap(46, 46, 46)
+                .addComponent(backBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(116, 116, 116)
+                .addComponent(nextBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 212, Short.MAX_VALUE)
+                .addComponent(exitBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(49, 49, 49))
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING)
+            .addGroup(backgroundPNLLayout.createSequentialGroup()
+                .addGap(169, 169, 169)
+                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        backgroundPNLLayout.setVerticalGroup(
+            backgroundPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, backgroundPNLLayout.createSequentialGroup()
+                .addGap(24, 24, 24)
+                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(44, 44, 44)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(backgroundPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(backgroundPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(nextBTN, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(backBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(backgroundPNLLayout.createSequentialGroup()
+                        .addComponent(exitBTN, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(10, 10, 10)))
+                .addGap(23, 23, 23))
+        );
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(237, 237, 237)
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(98, 98, 98)
-                        .addComponent(backBTN)
-                        .addGap(90, 90, 90)
-                        .addComponent(nextBTN)
-                        .addGap(99, 99, 99)
-                        .addComponent(exitBTN)))
-                .addContainerGap(196, Short.MAX_VALUE))
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING)
+            .addComponent(backgroundPNL, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(29, 29, 29)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(backBTN)
-                    .addComponent(nextBTN)
-                    .addComponent(exitBTN))
-                .addGap(26, 26, 26))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 3, Short.MAX_VALUE)
+                .addComponent(backgroundPNL, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         pack();
@@ -154,6 +183,7 @@ public class SummaryGUI extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton backBTN;
+    private javax.swing.JPanel backgroundPNL;
     private javax.swing.JButton exitBTN;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField jTextField1;

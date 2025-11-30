@@ -31,75 +31,175 @@ public class ReturningUserGUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        nameLBL = new javax.swing.JLabel();
-        ageLBL = new javax.swing.JLabel();
-        genderLBL = new javax.swing.JLabel();
-        countryLBL = new javax.swing.JLabel();
+        backgroundPNL = new javax.swing.JPanel();
+        exitBTN = new javax.swing.JButton();
+        deleteBTN = new javax.swing.JButton();
+        returningUserLBL = new javax.swing.JLabel();
+        clearBTN = new javax.swing.JButton();
+        okBTN = new javax.swing.JButton();
         nameTF = new javax.swing.JTextField();
         ageTF = new javax.swing.JTextField();
         genderTF = new javax.swing.JTextField();
         countryTF = new javax.swing.JTextField();
-        backBTN = new javax.swing.JButton();
         searchBTN = new javax.swing.JButton();
-        clearBTN = new javax.swing.JButton();
-        deleteBTN = new javax.swing.JButton();
-        exitBTN = new javax.swing.JButton();
-        okBTN = new javax.swing.JButton();
-        returningUserLBL = new javax.swing.JLabel();
+        countryLBL = new javax.swing.JLabel();
+        genderLBL = new javax.swing.JLabel();
+        ageLBL = new javax.swing.JLabel();
+        nameLBL = new javax.swing.JLabel();
+        backBTN = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        nameLBL.setText("Name");
+        backgroundPNL.setBackground(new java.awt.Color(51, 204, 255));
 
-        ageLBL.setText("Age");
-
-        genderLBL.setText("Gender");
-
-        countryLBL.setText("Country");
-
-        backBTN.setText("Back");
-        backBTN.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                backBTNActionPerformed(evt);
-            }
-        });
-
-        searchBTN.setText("Search");
-        searchBTN.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                searchBTNActionPerformed(evt);
-            }
-        });
-
-        clearBTN.setText("Clear");
-        clearBTN.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                clearBTNActionPerformed(evt);
-            }
-        });
-
-        deleteBTN.setText("Delete User");
-        deleteBTN.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                deleteBTNActionPerformed(evt);
-            }
-        });
-
+        exitBTN.setBackground(new java.awt.Color(204, 204, 204));
         exitBTN.setText("Exit");
+        exitBTN.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         exitBTN.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 exitBTNActionPerformed(evt);
             }
         });
 
+        deleteBTN.setBackground(new java.awt.Color(204, 204, 204));
+        deleteBTN.setText("Delete User");
+        deleteBTN.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        deleteBTN.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                deleteBTNActionPerformed(evt);
+            }
+        });
+
+        returningUserLBL.setFont(new java.awt.Font("Segoe UI Black", 0, 18)); // NOI18N
+        returningUserLBL.setText("Returning User");
+
+        clearBTN.setBackground(new java.awt.Color(204, 204, 204));
+        clearBTN.setText("Clear");
+        clearBTN.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        clearBTN.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                clearBTNActionPerformed(evt);
+            }
+        });
+
+        okBTN.setBackground(new java.awt.Color(204, 204, 204));
+        okBTN.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         okBTN.setText("OK");
+        okBTN.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         okBTN.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 okBTNActionPerformed(evt);
             }
         });
 
-        returningUserLBL.setText("Returning User");
+        searchBTN.setBackground(new java.awt.Color(204, 204, 204));
+        searchBTN.setText("Search");
+        searchBTN.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        searchBTN.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                searchBTNActionPerformed(evt);
+            }
+        });
+
+        countryLBL.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        countryLBL.setText("Country:");
+
+        genderLBL.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        genderLBL.setText("Gender:");
+
+        ageLBL.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        ageLBL.setText("Age:");
+
+        nameLBL.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        nameLBL.setText("Name:");
+
+        backBTN.setBackground(new java.awt.Color(204, 204, 204));
+        backBTN.setText("Back");
+        backBTN.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        backBTN.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                backBTNActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout backgroundPNLLayout = new javax.swing.GroupLayout(backgroundPNL);
+        backgroundPNL.setLayout(backgroundPNLLayout);
+        backgroundPNLLayout.setHorizontalGroup(
+            backgroundPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(backgroundPNLLayout.createSequentialGroup()
+                .addGap(277, 277, 277)
+                .addComponent(returningUserLBL)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(exitBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+            .addGroup(backgroundPNLLayout.createSequentialGroup()
+                .addGroup(backgroundPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(backgroundPNLLayout.createSequentialGroup()
+                        .addGap(17, 17, 17)
+                        .addComponent(backBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(80, 80, 80)
+                        .addComponent(searchBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(backgroundPNLLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(backgroundPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(backgroundPNLLayout.createSequentialGroup()
+                                .addComponent(countryLBL)
+                                .addGap(18, 18, 18)
+                                .addComponent(countryTF, javax.swing.GroupLayout.PREFERRED_SIZE, 315, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(backgroundPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(backgroundPNLLayout.createSequentialGroup()
+                                    .addGroup(backgroundPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(nameLBL)
+                                        .addComponent(ageLBL))
+                                    .addGap(26, 26, 26)
+                                    .addGroup(backgroundPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(nameTF, javax.swing.GroupLayout.PREFERRED_SIZE, 304, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(ageTF, javax.swing.GroupLayout.PREFERRED_SIZE, 177, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGroup(backgroundPNLLayout.createSequentialGroup()
+                                    .addComponent(genderLBL)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(genderTF, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(okBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(70, 70, 70)
+                        .addComponent(clearBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
+                .addComponent(deleteBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(22, 22, 22))
+        );
+        backgroundPNLLayout.setVerticalGroup(
+            backgroundPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(backgroundPNLLayout.createSequentialGroup()
+                .addGap(18, 18, 18)
+                .addGroup(backgroundPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(returningUserLBL)
+                    .addGroup(backgroundPNLLayout.createSequentialGroup()
+                        .addGap(5, 5, 5)
+                        .addComponent(exitBTN, javax.swing.GroupLayout.DEFAULT_SIZE, 27, Short.MAX_VALUE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(backgroundPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(nameTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(nameLBL))
+                .addGap(28, 28, 28)
+                .addGroup(backgroundPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(ageTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ageLBL))
+                .addGap(18, 18, 18)
+                .addGroup(backgroundPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(genderLBL)
+                    .addComponent(genderTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(30, 30, 30)
+                .addGroup(backgroundPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(countryLBL)
+                    .addComponent(countryTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 54, Short.MAX_VALUE)
+                .addGroup(backgroundPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(deleteBTN)
+                    .addComponent(clearBTN)
+                    .addComponent(okBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(searchBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(backBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap())
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -107,73 +207,12 @@ public class ReturningUserGUI extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(backBTN)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(returningUserLBL)
-                .addGap(203, 203, 203)
-                .addComponent(exitBTN))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(31, 31, 31)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(countryLBL)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(ageLBL)
-                        .addComponent(genderLBL)
-                        .addComponent(nameLBL)))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addComponent(searchBTN)
-                        .addGap(28, 28, 28)
-                        .addComponent(okBTN)
-                        .addGap(26, 26, 26)
-                        .addComponent(clearBTN)
-                        .addGap(18, 18, 18)
-                        .addComponent(deleteBTN))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(120, 120, 120)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(countryTF, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(ageTF, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 125, Short.MAX_VALUE)
-                                .addComponent(genderTF, javax.swing.GroupLayout.Alignment.LEADING))
-                            .addComponent(nameTF, javax.swing.GroupLayout.PREFERRED_SIZE, 304, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(24, Short.MAX_VALUE))
+                .addComponent(backgroundPNL, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(85, 85, 85)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(nameLBL)
-                            .addComponent(nameTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(23, 23, 23)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(ageLBL)
-                            .addComponent(ageTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(31, 31, 31)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(genderLBL)
-                            .addComponent(genderTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(17, 17, 17)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(countryLBL)
-                            .addComponent(countryTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(26, 26, 26)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(okBTN)
-                            .addComponent(searchBTN)
-                            .addComponent(clearBTN)
-                            .addComponent(deleteBTN)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(exitBTN)
-                            .addComponent(returningUserLBL)
-                            .addComponent(backBTN))))
-                .addContainerGap(7, Short.MAX_VALUE))
+            .addComponent(backgroundPNL, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -272,6 +311,7 @@ public class ReturningUserGUI extends javax.swing.JFrame {
     private javax.swing.JLabel ageLBL;
     private javax.swing.JTextField ageTF;
     private javax.swing.JButton backBTN;
+    private javax.swing.JPanel backgroundPNL;
     private javax.swing.JButton clearBTN;
     private javax.swing.JLabel countryLBL;
     private javax.swing.JTextField countryTF;

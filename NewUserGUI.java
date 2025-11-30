@@ -34,21 +34,73 @@ public class NewUserGUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        backgroundPNL = new javax.swing.JPanel();
+        exitBTN = new javax.swing.JButton();
+        newUserLBL = new javax.swing.JLabel();
+        nameTF = new javax.swing.JTextField();
+        clearBTN = new javax.swing.JButton();
+        SubmitBTN = new javax.swing.JButton();
+        backBTN = new javax.swing.JButton();
+        ageTF = new javax.swing.JTextField();
+        genderTF = new javax.swing.JTextField();
+        countryTF = new javax.swing.JTextField();
         nameLBL = new javax.swing.JLabel();
         ageLBL = new javax.swing.JLabel();
         genderLBL = new javax.swing.JLabel();
         countryLBL = new javax.swing.JLabel();
-        nameTF = new javax.swing.JTextField();
-        ageTF = new javax.swing.JTextField();
-        genderTF = new javax.swing.JTextField();
-        countryTF = new javax.swing.JTextField();
-        SubmitBTN = new javax.swing.JButton();
-        backBTN = new javax.swing.JButton();
-        exitBTN = new javax.swing.JButton();
-        clearBTN = new javax.swing.JButton();
-        newUserLBL = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        backgroundPNL.setBackground(new java.awt.Color(51, 204, 255));
+
+        exitBTN.setBackground(new java.awt.Color(204, 204, 204));
+        exitBTN.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        exitBTN.setText("Exit");
+        exitBTN.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        exitBTN.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                exitBTNActionPerformed(evt);
+            }
+        });
+
+        newUserLBL.setFont(new java.awt.Font("Segoe UI Black", 0, 24)); // NOI18N
+        newUserLBL.setText("New User");
+
+        nameTF.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nameTFActionPerformed(evt);
+            }
+        });
+
+        clearBTN.setBackground(new java.awt.Color(204, 204, 204));
+        clearBTN.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        clearBTN.setText("Clear");
+        clearBTN.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        clearBTN.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                clearBTNActionPerformed(evt);
+            }
+        });
+
+        SubmitBTN.setBackground(new java.awt.Color(204, 204, 204));
+        SubmitBTN.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        SubmitBTN.setText("Submit");
+        SubmitBTN.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        SubmitBTN.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SubmitBTNActionPerformed(evt);
+            }
+        });
+
+        backBTN.setBackground(new java.awt.Color(204, 204, 204));
+        backBTN.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        backBTN.setText("Back");
+        backBTN.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        backBTN.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                backBTNActionPerformed(evt);
+            }
+        });
 
         nameLBL.setFont(new java.awt.Font("sansserif", 1, 17)); // NOI18N
         nameLBL.setText("Name:");
@@ -62,104 +114,78 @@ public class NewUserGUI extends javax.swing.JFrame {
         countryLBL.setFont(new java.awt.Font("sansserif", 1, 17)); // NOI18N
         countryLBL.setText("Country:");
 
-        nameTF.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                nameTFActionPerformed(evt);
-            }
-        });
-
-        SubmitBTN.setText("Submit");
-        SubmitBTN.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                SubmitBTNActionPerformed(evt);
-            }
-        });
-
-        backBTN.setText("Back");
-        backBTN.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                backBTNActionPerformed(evt);
-            }
-        });
-
-        exitBTN.setText("Exit");
-        exitBTN.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                exitBTNActionPerformed(evt);
-            }
-        });
-
-        clearBTN.setText("Clear");
-        clearBTN.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                clearBTNActionPerformed(evt);
-            }
-        });
-
-        newUserLBL.setText("New User");
+        javax.swing.GroupLayout backgroundPNLLayout = new javax.swing.GroupLayout(backgroundPNL);
+        backgroundPNL.setLayout(backgroundPNLLayout);
+        backgroundPNLLayout.setHorizontalGroup(
+            backgroundPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(backgroundPNLLayout.createSequentialGroup()
+                .addGroup(backgroundPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(backgroundPNLLayout.createSequentialGroup()
+                        .addGap(306, 306, 306)
+                        .addComponent(newUserLBL))
+                    .addGroup(backgroundPNLLayout.createSequentialGroup()
+                        .addGap(19, 19, 19)
+                        .addGroup(backgroundPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(nameLBL)
+                            .addComponent(ageLBL)
+                            .addComponent(genderLBL)
+                            .addComponent(countryLBL))
+                        .addGap(59, 59, 59)
+                        .addGroup(backgroundPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(genderTF, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(ageTF, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(nameTF, javax.swing.GroupLayout.PREFERRED_SIZE, 450, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(countryTF, javax.swing.GroupLayout.PREFERRED_SIZE, 365, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, backgroundPNLLayout.createSequentialGroup()
+                        .addGap(53, 53, 53)
+                        .addComponent(backBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(71, 71, 71)
+                        .addComponent(clearBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(69, 69, 69)
+                        .addComponent(SubmitBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(exitBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(116, Short.MAX_VALUE))
+        );
+        backgroundPNLLayout.setVerticalGroup(
+            backgroundPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, backgroundPNLLayout.createSequentialGroup()
+                .addGap(7, 7, 7)
+                .addComponent(newUserLBL)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(backgroundPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(nameLBL)
+                    .addComponent(nameTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(backgroundPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(ageLBL)
+                    .addComponent(ageTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(backgroundPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(genderLBL)
+                    .addComponent(genderTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(27, 27, 27)
+                .addGroup(backgroundPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(countryLBL)
+                    .addComponent(countryTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 60, Short.MAX_VALUE)
+                .addGroup(backgroundPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(exitBTN)
+                    .addComponent(clearBTN)
+                    .addComponent(SubmitBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(backBTN))
+                .addGap(34, 34, 34))
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(106, 106, 106)
-                .addComponent(backBTN)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 39, Short.MAX_VALUE)
-                .addComponent(SubmitBTN)
-                .addGap(29, 29, 29)
-                .addComponent(clearBTN)
-                .addGap(34, 34, 34)
-                .addComponent(exitBTN)
-                .addGap(118, 118, 118))
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(44, 44, 44)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(ageLBL)
-                            .addComponent(genderLBL)
-                            .addComponent(countryLBL)
-                            .addComponent(nameLBL))
-                        .addGap(20, 20, 20)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(nameTF, javax.swing.GroupLayout.PREFERRED_SIZE, 450, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(ageTF, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(genderTF, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(countryTF, javax.swing.GroupLayout.PREFERRED_SIZE, 365, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(298, 298, 298)
-                        .addComponent(newUserLBL)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(backgroundPNL, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(15, 15, 15)
-                .addComponent(newUserLBL)
-                .addGap(46, 46, 46)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(nameLBL)
-                    .addComponent(nameTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(ageTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(ageLBL))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(genderTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(genderLBL))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(countryLBL)
-                    .addComponent(countryTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(27, 27, 27)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(SubmitBTN)
-                    .addComponent(backBTN)
-                    .addComponent(exitBTN)
-                    .addComponent(clearBTN))
-                .addContainerGap(34, Short.MAX_VALUE))
+            .addComponent(backgroundPNL, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -270,6 +296,7 @@ public class NewUserGUI extends javax.swing.JFrame {
     private javax.swing.JLabel ageLBL;
     private javax.swing.JTextField ageTF;
     private javax.swing.JButton backBTN;
+    private javax.swing.JPanel backgroundPNL;
     private javax.swing.JButton clearBTN;
     private javax.swing.JLabel countryLBL;
     private javax.swing.JTextField countryTF;
