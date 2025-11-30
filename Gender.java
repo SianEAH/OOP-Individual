@@ -2,22 +2,20 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package watersanitation;
+package watersanitationgame.Input_Sian;
 
 /**
  *
- * @author Sian
+ * @author sianemmahayes1997
  */
 public class Gender {
     
-    //data members/variables
+     //data members
     
     //constructor
     
-    //setters (inputs)
+    //setters
     
-    //methods
-    
-    //getters (outputs)
+    //getters
     
 }

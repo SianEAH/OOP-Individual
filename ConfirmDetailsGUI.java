@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package watersanitation;
+package watersanitationgame.Input_Sian;
 
 /**
  *
@@ -40,6 +40,8 @@ public class ConfirmDetailsGUI extends javax.swing.JFrame {
         confirmGenderTF = new javax.swing.JTextField();
         confirmCountryTF = new javax.swing.JTextField();
         confirmBTN = new javax.swing.JButton();
+        backBTN = new javax.swing.JButton();
+        exitBTN = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -62,6 +64,20 @@ public class ConfirmDetailsGUI extends javax.swing.JFrame {
         confirmBTN.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 confirmBTNActionPerformed(evt);
+            }
+        });
+
+        backBTN.setText("Back");
+        backBTN.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                backBTNActionPerformed(evt);
+            }
+        });
+
+        exitBTN.setText("Exit");
+        exitBTN.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                exitBTNActionPerformed(evt);
             }
         });
 
@@ -90,13 +106,18 @@ public class ConfirmDetailsGUI extends javax.swing.JFrame {
                                 .addComponent(confirmNameLBL)
                                 .addGap(69, 69, 69)
                                 .addComponent(confirmNameTF, javax.swing.GroupLayout.PREFERRED_SIZE, 406, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addGroup(layout.createSequentialGroup()
-                            .addContainerGap()
-                            .addComponent(confirmAgeTF, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                            .addGap(242, 242, 242)
-                            .addComponent(confirmBTN))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(confirmAgeTF, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                .addGap(121, 121, 121)
+                                .addComponent(backBTN)
+                                .addGap(46, 46, 46)
+                                .addComponent(confirmBTN)))
+                        .addGap(54, 54, 54)
+                        .addComponent(exitBTN)))
                 .addGap(77, 77, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -123,7 +144,10 @@ public class ConfirmDetailsGUI extends javax.swing.JFrame {
                     .addComponent(confirmCountyLBL)
                     .addComponent(confirmCountryTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
-                .addComponent(confirmBTN)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(confirmBTN)
+                    .addComponent(backBTN)
+                    .addComponent(exitBTN))
                 .addGap(22, 22, 22))
         );
 
@@ -136,6 +160,22 @@ public class ConfirmDetailsGUI extends javax.swing.JFrame {
         n.setVisible(true);
         dispose();
     }//GEN-LAST:event_confirmBTNActionPerformed
+
+    private void backBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backBTNActionPerformed
+        // TODO add your handling code here:
+        //When the back button is clicked, we go back to either UserSearchGUI or the previous frame the user was on
+        NewUserGUI nu = new NewUserGUI();
+        nu.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_backBTNActionPerformed
+
+    private void exitBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitBTNActionPerformed
+        // TODO add your handling code here:
+        //When the exit button is clicked, we close the JFrame form
+        ConfirmDetailsGUI cdg = new ConfirmDetailsGUI();
+        cdg.setVisible(false);
+        dispose();
+    }//GEN-LAST:event_exitBTNActionPerformed
 
     /**
      * @param args the command line arguments
@@ -163,6 +203,7 @@ public class ConfirmDetailsGUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton backBTN;
     private javax.swing.JLabel confirmAgeLBL;
     private javax.swing.JTextField confirmAgeTF;
     private javax.swing.JButton confirmBTN;
@@ -173,5 +214,6 @@ public class ConfirmDetailsGUI extends javax.swing.JFrame {
     private javax.swing.JLabel confirmNameLBL;
     private javax.swing.JTextField confirmNameTF;
     private javax.swing.JTextField detailsTF;
+    private javax.swing.JButton exitBTN;
     // End of variables declaration//GEN-END:variables
 }

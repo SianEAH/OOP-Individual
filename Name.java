@@ -8,11 +8,13 @@ package watersanitationgame.Input_Sian;
  *
  * @author sianemmahayes1997
  */
-public class Country {
+public class Name {
     
-     //data members
+    //data members
+    private String name;
     
-    //constructor
+    //contructor
+    
     
     //setters
     

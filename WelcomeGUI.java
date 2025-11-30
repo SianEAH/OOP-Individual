@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package watersanitation;
+package watersanitationgame.Input_Sian;
 
 /**
  *
@@ -31,6 +31,7 @@ public class WelcomeGUI extends javax.swing.JFrame {
         welcomeTA = new javax.swing.JScrollPane();
         messageTA = new javax.swing.JTextArea();
         startBTN = new javax.swing.JButton();
+        exitBTN = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -42,6 +43,18 @@ public class WelcomeGUI extends javax.swing.JFrame {
         welcomeTA.setViewportView(messageTA);
 
         startBTN.setText("Start");
+        startBTN.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                startBTNActionPerformed(evt);
+            }
+        });
+
+        exitBTN.setText("Exit");
+        exitBTN.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                exitBTNActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -53,8 +66,10 @@ public class WelcomeGUI extends javax.swing.JFrame {
                         .addGap(85, 85, 85)
                         .addComponent(welcomeTA, javax.swing.GroupLayout.PREFERRED_SIZE, 409, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(211, 211, 211)
-                        .addComponent(startBTN)))
+                        .addGap(143, 143, 143)
+                        .addComponent(startBTN)
+                        .addGap(93, 93, 93)
+                        .addComponent(exitBTN)))
                 .addContainerGap(89, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -63,12 +78,29 @@ public class WelcomeGUI extends javax.swing.JFrame {
                 .addGap(57, 57, 57)
                 .addComponent(welcomeTA, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(60, 60, 60)
-                .addComponent(startBTN)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(startBTN)
+                    .addComponent(exitBTN))
                 .addContainerGap(73, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void startBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_startBTNActionPerformed
+        // TODO add your handling code here:
+        SummaryGUI sum = new SummaryGUI();
+        sum.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_startBTNActionPerformed
+
+    private void exitBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitBTNActionPerformed
+        // TODO add your handling code here:
+        //when the exit button is clicked, the JFrame becomes invisible
+        WelcomeGUI wel = new WelcomeGUI();
+        wel.setVisible(false);
+        dispose();
+    }//GEN-LAST:event_exitBTNActionPerformed
 
     /**
      * @param args the command line arguments
@@ -96,6 +128,7 @@ public class WelcomeGUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton exitBTN;
     private javax.swing.JTextArea messageTA;
     private javax.swing.JButton startBTN;
     private javax.swing.JScrollPane welcomeTA;
