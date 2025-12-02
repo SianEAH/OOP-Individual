@@ -24,6 +24,7 @@ public class ReturningUserGUI extends javax.swing.JFrame {
     public ReturningUserGUI(UserDetails ud) {
         initComponents();
         this.userDetails = ud;//get access to my saved users (user details)
+        userDetails.loadFromFile(); //load the details from my file (Save)
     }
 
     /**
@@ -260,14 +261,14 @@ public class ReturningUserGUI extends javax.swing.JFrame {
              return;
         }
         //When this button is clicked, proceed onto the events section 
-        EventsGUI n = new EventsGUI();
+        EventsGUI n = new EventsGUI(0); //events parameter
         n.setVisible(true);
         dispose();
     }//GEN-LAST:event_okBTNActionPerformed
 
     private void searchBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchBTNActionPerformed
         // TODO add your handling code here:
-        //When the search button is clicked, the user details pop up in an alert or in the text boxes?
+        //When the search button is clicked, the user details pop up in the text boxes?
         //Make sure the fields are not null
          if (nameTF.getText().isEmpty()) {
            JOptionPane.showMessageDialog(null, "Please enter a name"); 
@@ -289,21 +290,43 @@ public class ReturningUserGUI extends javax.swing.JFrame {
              return;
         }
         
-         for (int i = 0; i < userDetails.getSlist().size(); i++) {
-        Save s = userDetails.getSlist().get(i);
-        if (s.getName().equalsIgnoreCase(nameTF.getText())) {
-            // Populate the fields if found
-            ageTF.setText(String.valueOf(s.getAge()));
-            genderTF.setText(s.getGender());
-            countryTF.setText(s.getCountry());
-            break;
+        boolean found = false;
+
+        //get the info from here
+        String searchForName = nameTF.getText();
+        String searchForAge  = ageTF.getText();
+        String searchForGender = genderTF.getText();
+        String searchForCountry = countryTF.getText();
+
+        //for loop for my ArrayList/Save file
+        for (Save s : userDetails.getSlist()) {
+
+            //Make sure all details match so the wrong user doesn't get deleted
+            if (s.getName().equalsIgnoreCase(searchForName) &&
+                String.valueOf(s.getAge()).equals(searchForAge) &&
+                s.getGender().equalsIgnoreCase(searchForGender) &&
+                s.getCountry().equalsIgnoreCase(searchForCountry)) {
+
+                //Populate the text fields
+                nameTF.setText(s.getName());
+                ageTF.setText(String.valueOf(s.getAge()));
+                genderTF.setText(s.getGender());
+                countryTF.setText(s.getCountry());
+
+                found = true;
+                JOptionPane.showMessageDialog(null, "User found!");
+                break; //come out of the loop
+            }
         }
-    }
+
+        if (!found) {
+            JOptionPane.showMessageDialog(null, "User not found!");
+        }
     }//GEN-LAST:event_searchBTNActionPerformed
 
     private void clearBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearBTNActionPerformed
         // TODO add your handling code here:
-        //When the clear button is clicked the user details are cleared
+        //When the clear button is clicked the user details are cleared, empty Strings
         nameTF.setText("");
         ageTF.setText("");
         genderTF.setText("");
@@ -312,30 +335,59 @@ public class ReturningUserGUI extends javax.swing.JFrame {
 
     private void deleteBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteBTNActionPerformed
         // TODO add your handling code here:
-        //When the delete button is clicked after the alert?, the user details are deleted
-        String deleteUser = nameTF.getText();
-        
+        //When the delete button is clicked the user details are deleted    
         //check if it's empty
         if (nameTF.getText().isEmpty()) {
-        JOptionPane.showMessageDialog(null, "You have to enter at least a name to delete!");
+        JOptionPane.showMessageDialog(null, "Enter a name");
+        return;
+    }
+        if (ageTF.getText().isEmpty()) {
+        JOptionPane.showMessageDialog(null, "Enter your age");
+        return;
+    }
+        if (genderTF.getText().isEmpty()) {
+        JOptionPane.showMessageDialog(null, "Enter your gender");
+        return;
+    }
+        if (ageTF.getText().isEmpty()) {
+        JOptionPane.showMessageDialog(null, "Enter where you're from");
         return;
     }
         
+        //get the details from the fields
+        String searchName = nameTF.getText();
+        String searchAge = ageTF.getText();
+        String searchGender = genderTF.getText();
+        String searchCountry = countryTF.getText();
+        
+        boolean found = false;
+        
         //for loop
         for (int i = 0; i < userDetails.getSlist().size(); i++) {
-            if (userDetails.getSlist().get(i).getName().equalsIgnoreCase(nameTF.getText())) {
-            userDetails.getSlist().remove(i);
-            JOptionPane.showMessageDialog(null, "Your details have been deleted!");
-            //clear the form when a deletion occurs
+            Save s = userDetails.getSlist().get(i);
+            if (s.getName().equalsIgnoreCase(searchName) &&
+            String.valueOf(s.getAge()).equals(searchAge) &&
+            s.getGender().equalsIgnoreCase(searchGender) &&
+            s.getCountry().equalsIgnoreCase(searchCountry)) {
+                
+            userDetails.getSlist().remove(i); //remove what's at the index
+            userDetails.saveToFile(); //save the file
+            JOptionPane.showMessageDialog(null, "User details have been deleted!");
+            
+            //set the text fields to empty fields
             nameTF.setText("");
             ageTF.setText("");
             genderTF.setText("");
             countryTF.setText("");
-            return;
+
+            found = true; //change the boolean value
+            break; //come out of the loop
     }
 }
         //If no user was found
-        JOptionPane.showMessageDialog(null, "User not found!");
+        if (!found) {
+            JOptionPane.showMessageDialog(null, "User not found!");
+        }
     }//GEN-LAST:event_deleteBTNActionPerformed
 
     /**
@@ -360,7 +412,8 @@ public class ReturningUserGUI extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        UserDetails ud = new UserDetails();
+        UserDetails ud = new UserDetails(); //accessing my userDetails
+        ud.loadFromFile(); //load my file
         java.awt.EventQueue.invokeLater(() -> new ReturningUserGUI(ud).setVisible(true));
     }
 

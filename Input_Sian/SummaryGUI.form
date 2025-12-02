@@ -156,7 +156,7 @@
                 </Property>
                 <Property name="lineWrap" type="boolean" value="true"/>
                 <Property name="rows" type="int" value="5"/>
-                <Property name="text" type="java.lang.String" value="1) Enter your details on the next slide&#xa;&#xa;2) If you have played before, you can search for your details, if not, enter your details. When you&apos;re happy with your details, click submit, to move onto the game&#xa;&#xa;3) Pick from your choices during the game to receive your ending&#xa;&#xa;Are you a good water sanitation manager? Find out... click the button below!"/>
+                <Property name="text" type="java.lang.String" value="1) If you have played before, you can search for your details, if not, enter your details. When you&apos;re happy with your details, click submit, to move onto the game&#xa;&#xa;2) Pick from your choices during the game to receive your ending&#xa;&#xa;Are you a good water sanitation manager? Find out... click the button below!"/>
               </Properties>
             </Component>
           </SubComponents>

@@ -10,6 +10,7 @@ package watersanitationgame.Input_Sian;
  */
 import javax.swing.JOptionPane; 
 import watersanitationgame.Events_Nikolas.EventsGUI;
+import watersanitationgame.Save;
 public class NewUserGUI extends javax.swing.JFrame {
     
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(NewUserGUI.class.getName());
@@ -20,9 +21,9 @@ public class NewUserGUI extends javax.swing.JFrame {
     //Creating my userDetails object
     private UserDetails userDetails;
     
-    public NewUserGUI() {
+    public NewUserGUI(UserDetails ud) {
         initComponents();
-        userDetails = new UserDetails(); //Initialise in my constructor
+        this.userDetails = ud; //Initialise in my constructor, need the info from here
     }
 
     /**
@@ -193,7 +194,7 @@ public class NewUserGUI extends javax.swing.JFrame {
 
     private void SubmitBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SubmitBTNActionPerformed
         // TODO add your handling code here:
-        //When the submit button is clicked, the user details are added to the seperate classes, this is then stored in an ArrayList to be read by the other sections
+        //When the submit button is clicked, the user details are added to the userDetails, this is then stored in an ArrayList to be read by the other sections
         //Also if any of the fields are empty, pop an alert
         //Do not proceed to the next JFrame if the details are empty
         if (nameTF.getText().isEmpty()) {
@@ -216,28 +217,23 @@ public class NewUserGUI extends javax.swing.JFrame {
              return;
         }
         
-        //Get the information
+        //Get the information from the fields and assign them to objects
         Name nme = new Name(nameTF.getText());
         Age a = new Age(Integer.parseInt(ageTF.getText()));
         Gender g = new Gender(genderTF.getText());
         Country c = new Country(countryTF.getText());
         
-        //Set the information
+        //Update my object (for the next section)
         userDetails.setName(nme);
         userDetails.setAge(a);
         userDetails.setGender(g);
         userDetails.setCountry(c);
-        
-        //Save to the ArrayList
-        userDetails.saveToArray();
-
 
         //When the submit button is clicked, we proceed onto the ConfirmDetailsGUI
         //New:
-        ConfirmDetailsGUI confirmForm = new ConfirmDetailsGUI(userDetails);
-        confirmForm.setVisible(true);
-        dispose(); // close NewUserGUI
-
+        ConfirmDetailsGUI cf = new ConfirmDetailsGUI(userDetails);
+        cf.setVisible(true);
+        dispose();
     }//GEN-LAST:event_SubmitBTNActionPerformed
 
     private void backBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backBTNActionPerformed
@@ -251,8 +247,6 @@ public class NewUserGUI extends javax.swing.JFrame {
     private void exitBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitBTNActionPerformed
         // TODO add your handling code here:
         //When we click the exit button, the JFrame form closes
-        NewUserGUI nu = new NewUserGUI();
-        nu.setVisible(false);
         dispose();
     }//GEN-LAST:event_exitBTNActionPerformed
 
@@ -262,12 +256,11 @@ public class NewUserGUI extends javax.swing.JFrame {
 
     private void clearBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearBTNActionPerformed
         // TODO add your handling code here:
-        //When the clear button is clicked, the user details they have entered are cleared
+        //When the clear button is clicked, the user details they have entered are cleared, empty String
         nameTF.setText("");
         ageTF.setText("");
         genderTF.setText("");
         countryTF.setText("");
-
     }//GEN-LAST:event_clearBTNActionPerformed
 
     /**
@@ -292,7 +285,7 @@ public class NewUserGUI extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(() -> new NewUserGUI().setVisible(true));
+        //java.awt.EventQueue.invokeLater(() -> new NewUserGUI().setVisible(true));
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

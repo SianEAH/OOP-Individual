@@ -73,7 +73,7 @@ public class SummaryGUI extends javax.swing.JFrame {
         summaryTF.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         summaryTF.setLineWrap(true);
         summaryTF.setRows(5);
-        summaryTF.setText("1) Enter your details on the next slide\n\n2) If you have played before, you can search for your details, if not, enter your details. When you're happy with your details, click submit, to move onto the game\n\n3) Pick from your choices during the game to receive your ending\n\nAre you a good water sanitation manager? Find out... click the button below!");
+        summaryTF.setText("1) If you have played before, you can search for your details, if not, enter your details. When you're happy with your details, click submit, to move onto the game\n\n2) Pick from your choices during the game to receive your ending\n\nAre you a good water sanitation manager? Find out... click the button below!");
         jScrollPane1.setViewportView(summaryTF);
 
         jTextField1.setBackground(new java.awt.Color(51, 204, 255));
@@ -151,8 +151,6 @@ public class SummaryGUI extends javax.swing.JFrame {
     private void exitBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitBTNActionPerformed
         // TODO add your handling code here:
         //When the exit button is clicked, close the JFrame form
-        SummaryGUI sum = new SummaryGUI();
-        sum.setVisible(false);
         dispose();
     }//GEN-LAST:event_exitBTNActionPerformed
 
